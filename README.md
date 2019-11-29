@@ -40,7 +40,7 @@ You can also use `cute.warn` and `cute.error` along with `cute.log`.
 You can transform an object into html to display in in a web page :
 
 ```js
-let html cute.html(myObject)
+let html = cute.html(myObject)
 ```
 
 The styling is not done by default, you have add to specify your own style through CSS.
@@ -53,20 +53,20 @@ Here is a simple example of CSS that works well with a white background :
 .cute-dump-property {
    color: #777;
    font-weight: bold;
-   }
+}
 
-   .cute-dump-number {
+.cute-dump-number {
    font-weight: bold;
    color: #8a2b8a;
-   }
+}
 
-   .cute-dump-keyword {
+.cute-dump-keyword {
    font-weight: bold;
    font-style: italic;
    color: #4fa2d6;
-   }
+}
 
-   .cute-dump-string {
+.cute-dump-string {
    font-weight: bold;
    color: #21a033;
 }
@@ -75,6 +75,6 @@ Here is a simple example of CSS that works well with a white background :
 
 ## Usage in browser
 
-If you want to use exprima in a browser, import [cute-dump for browser](https://github.com/Lepzulnag/cute-dump) in a script tag.
+If you want to use `cute-dump` in a browser, include the [browser version](https://github.com/Lepzulnag/cute-dump/blob/master/browser/cute-dump.js) in a script tag.
 
-Then you can use the global object `cute` in the same way as in the Node API, with the only difference that printing in console won't be colored.
+You can then use the global object `cute` in the same way as in the Node API, with the only difference that printing in console won't be colored.
