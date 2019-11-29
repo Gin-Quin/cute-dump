@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test [cute-dump]</title>
+	<script src="../browser/cute-dump.js"></script>
+</head>
+
+<style type="text/css">
+	html {
+		margin: 0;
+	}
+
+	body {
+		display: flex;
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+	}
+
+	body > * {
+		margin: 23px;
+		padding: 12px;
+		border: 1px solid #ccc;
+		flex: 1;
+		flex-shrink: 0;
+	}
+
+	#dump {
+		color: #999;
+	}
+
+	.cute-dump-property {
+		color: #777;
+		font-weight: bold;
+	}
+
+	.cute-dump-number {
+		font-weight: bold;
+		color: #8a2b8a;
+	}
+
+	.cute-dump-keyword {
+		font-weight: bold;
+		font-style: italic;
+		color: #4fa2d6;
+	}
+
+	.cute-dump-string {
+		font-weight: bold;
+		/*font-style: italic;*/
+		color: #21a033;
+	}
+</style>
+
+
+<body>
+	<pre id="object" contenteditable></pre>
+	<pre id="dump"></pre>
+</body>
+
+
+<script>
+	const withId = document.getElementById.bind(document)
+	var object = {
+		foo: 9,
+		bar: 12,
+		now: new Date,
+		callMeMaybe: (x) => x+2,
+		reservedWord: true,
+		myObject: {
+			x: [
+				5,
+				{
+					z: 5312,
+					theta: 321
+				},
+				{
+					z: 45,
+					theta: 868
+				},
+				"Yo"
+			],
+			hi: "Hi Foo"
+		}
+	}
+	
+	withId('object').innerText = JSON.stringify(object, null, 3)
+	cute.log(object)
+	console.log(cute.html(object))
+	withId('dump').innerHTML = cute.html(object)
+	// withId('dump').innerHTML = "Coucou!"
+
+</script>
+
+
+</html>
