@@ -1,6 +1,6 @@
 {
   "name": "cute-dump",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Dump an object with pretty colors for instant visual greping on console and browser",
   "main": "index.js",
   "scripts": {

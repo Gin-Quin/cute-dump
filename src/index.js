@@ -5,9 +5,12 @@ export default cute
 
 const indent = 3  // number of spaces
 
-const sizeof = val =>
-	typeof val == 'object' ? Array.isArray(val) ?
-		val.length : Object.keys(val).length : 0
+const sizeof = val => {
+	if (!val) return 0
+	if (typeof val != 'object') return 0
+	if (Array.isArray(val)) return val.length
+	return Object.keys(val).length
+}
 
 function sortKeys(a, b) {  // needs to be binded to an object
 	return sizeof(this[a]) - sizeof(this[b])

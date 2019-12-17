@@ -5,6 +5,8 @@ let o1 = {
    bar: 12,
    now: "2019-11-29T15:05:13.871Z",
    reservedWord: true,
+   coco: null,
+   hi: x => x+2,
    myObject: {
       x: [
          5,
