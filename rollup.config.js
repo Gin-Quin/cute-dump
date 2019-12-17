@@ -1,6 +1,6 @@
 
-// export default nodeBuild
-export default browserBuild
+export default nodeBuild
+// export default browserBuild
 
 
 const nodeBuild = {

@@ -2,7 +2,7 @@ Dump an object with pretty colors for instant visual greping. Works on *terminal
 
 ## Node API
 
-Here is how to log 
+Here is how to log
 ```js
 import cute from 'cute-dump'
 
@@ -28,6 +28,8 @@ myObject = {
    }
 }
 
+cute.dump(myObject)
+// `dump` is an alias of `log` so you can also do :
 cute.log(myObject)
 ```
 

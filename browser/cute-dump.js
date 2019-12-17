@@ -128,6 +128,7 @@ var cute = (function () {
 	}
 
 	const cute = {
+		dump:  msg => console.log   (print('console', msg)),
 		log:   msg => console.log   (print('console', msg)),
 		warn:  msg => console.warn  (print('console', msg)),
 		error: msg => console.error (print('console', msg)),
